@@ -1,8 +1,13 @@
-import { saludar } from './js/componentes.js';
 import './styles.css';
+import {Todo, TodoList} from "./classes";
+import {crearTodoHtml} from "./js/componentes";
 
+export const todosList = new TodoList();
 
+todosList.todos.forEach(crearTodoHtml);
+//version Corta y Larga
+//todosList.todos.forEach(todos, crearTodoHtml(todos));
 
-const nombre = 'Juan Macias';
-
-saludar( nombre );
+// const todo = new Todo('Aprender React')
+// todosList.nuevoTodo(todo)
+// console.log(todosList)
